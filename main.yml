@@ -4,7 +4,7 @@
     remote_user: root
     
     vars:
-      nagios_server: 192.168.<yambe:breadcrumb self="CentOS 7.x nagios server and client configuration ansible playbook">CentOS 7.x nagios|CentOS 7.x nagios</yambe:breadcrumb>122.147
+      nagios_server: 34.75.177.66
 
     tasks:
     - name: Install epel-release repository
@@ -32,13 +32,11 @@
     remote_user: root
 
     vars:
-      nagios_alert_email_id: barjatiya.saurabh@gmail.com 
+      nagios_alert_email_id: kchandrasekaran017@gmail.com
       nagiosadmin_password: nagiosadmin
       nagios_client_details:
-        - { hostname: "test1", alias: "test1", address: 192.168.122.210, services: [ "ping", "ssh" ] }  
-        - { hostname: "web1", alias: "web1", address: 192.168.122.246, services: [ "ping", "ssh", "http", "nrpe_check_load" ] }  
-        - { hostname: "windows10", alias: "windows10", address: 192.168.2.32, services: [ "ping", "nrpe_alias_cpu" ] }  
-
+        - { hostname: "test1", alias: "test1", address: 34.75.221.7, services: [ "ping", "ssh" ] }  
+        - { hostname: "test1", alias: "test1", address: 34.75.221.7, services: [ "ping", "ssh","http", "nrpe_check_load" ] }  
 
     tasks:
     - name: Install epel-release repository
